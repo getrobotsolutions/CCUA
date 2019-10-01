@@ -1,0 +1,93 @@
+!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> MEMORY </title>
+
+    <script>
+        var clicks = 0; //counts how may picks have been made in each turn
+        var firstchoice; //stores index of first card selected
+        var secondchoice; //stores index of second card selected
+
+        var match = 0; //counts matches made
+        var backcard = "images/MS_MatchGame_Back.png"; //shows back of card when turned over
+
+        var faces = []; //array to store card images
+        faces[0] = 'one';
+        faces[1] = 'two';
+        faces[2] = 'three';
+        faces[3] = 'one';
+        faces[4] = 'four';
+        faces[5] = 'two';
+        faces[6] = 'four';
+        faces[7] = 'three';
+
+        var faces_p = []; //array to store card images
+        faces_p[0] = 'images/MS_MatchGame_ClinicalCare.png';
+        faces_p[1] = 'images/MS_MatchGame_ElectronicRemittance.png';
+        faces_p[2] = 'images/MS_MatchGame_FinancialManagement.png';
+        faces_p[3] = 'images/MS_MatchGame_GapsCareInsights.png';
+        faces_p[4] = 'images/MS_MatchGame_PaidClaimAnalytics.png';
+        faces_p[5] = 'images/MS_MatchGame_PatientEngagement.png';
+        faces_p[6] = 'images/MS_MatchGame_PopHealth.png';
+        faces_p[7] = 'images/MS_MatchGame_VirtualVisits.png';
+
+        function choose(card) {
+            if (clicks == 2) {
+                return;
+            }
+            if (clicks == 0) {
+                firstchoice = card;
+                document.images[card].src = faces_p[card];
+                clicks = 1;
+            } else {
+                clicks = 2;
+                secondchoice = card;
+                document.images[card].src = faces_p[card];
+                timer = setInterval("check()", 1000);
+            }
+        }
+        /* Check to see if a match is made */
+
+        function check() {
+            clearInterval(timer); //stop timer
+            clicks = 0;
+            if (faces[secondchoice] == faces[firstchoice]) {
+                match++;
+                document.getElementById("matches").innerHTML = match;
+            } else {
+                document.images[firstchoice].src = backcard;
+                document.images[secondchoice].src = backcard;
+                return;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<a href="javascript:choose(0)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<a href="javascript:choose(1)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<a href="javascript:choose(2)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<br>
+
+<a href="javascript:choose(3)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px/></a>
+
+<a href="javascript:choose(4)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<a href="javascript:choose(5)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<br>
+<a href="javascript:choose(6)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+
+<a href="javascript:choose(7)"><img src="images/MS_MatchGame_Back.png" width=200px height=200px /></a>
+<br>
+
+<b style="font-size:40px;"> MATCHES :</b>
+<b style="font-size:60px;" id="matches"> 0 </b>
+
+</body>
+
+</html>
