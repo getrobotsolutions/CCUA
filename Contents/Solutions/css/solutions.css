@@ -13,7 +13,7 @@
       width: 550px;
       height: 380px;
     }
-  #dialog-overlay {
+ #dialog-overlay1 {
 
   /* set it to fill the whil screen */
   width:100%; 
@@ -35,7 +35,8 @@
   display:none;
 }
 
-#dialog-box {
+#dialog-box1 {
+  text-align: center;
   
   /* css3 drop shadow */
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -47,7 +48,7 @@
   
   background:#eee;
   /* styling of the dialog box, i have a fixed dimension for this demo */ 
-  width:850px; 
+  width:1006px; 
   
   
   /* make sure it has the highest z-index */
@@ -59,12 +60,13 @@
   display:none;
 }
 
-#dialog-box .dialog-content {
+#dialog-box1 #dialog-content1 {
   /* style the content */
   max-height: 1200px;
   overflow: hidden;
   text-align:left; 
   padding:10px; 
+  padding-top: 30px;
   margin:13px;
   color:#666; 
   font-family:arial;
@@ -119,10 +121,28 @@ a.button:hover {
   padding:0; 
   height:50px;
 }
+.btn-ok{
+  position: absolute;
+  right: 10px;
+  background-color: #b5533c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#myVideo {
+    width: 960px;
+    float: left;
+}
+#playPause{
+  width: 80px;
+  margin-bottom: 10px;
+}
 
-#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 0px 10px;border-radius: 5px;}
-
-p{
-
-  margin: 0 0 0;
+.video-title{
+  color: white;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  padding: 12px 0;
+  background-color: #00bbe2;
 }

@@ -16,12 +16,9 @@
 
   <link href="../../../css/Main.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../../../boots/css/bootstrap.min.css">
-  <link href="../css/eat.css" rel="stylesheet" type="text/css" />
+  <link href="../css/solutions.css" rel="stylesheet" type="text/css" />
   
 <style type="text/css">
-    .wrap {
-        padding-top: 0px;
-    }
     .main-content {
         padding-top: 10px;
         background-image: url(../Secondary/assets/background-secondary.png);        
@@ -33,16 +30,15 @@
         margin: 0;
     }
     .navigation{
-        padding: 0 200px;
+        width: 666px;
     }
     .navigation-box{
         width: 300px;
         height: 320px;
         padding: 20px 0;
         background-color: transparent;
-        border:5px solid #8080806b;
+        border:5px solid rgba(155, 149, 149, 0.61);
         border-radius: 20px;
-        
     }
     .navigation-icon{
         width: 180px;
@@ -88,65 +84,47 @@
             </div>
         </div>
     </div>
-    
-    
 
     <div class="navigation">
 
-        
-
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/ContactCenter.mp4')">
         
           <img src="assets/Service/prepaid-63.png" class="navigation-icon">
           <h2 class="navigation-text">Contact Center</h2> 
         
         </div>
       
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/QuickAssist.mp4')">
         
             <img src="assets/Service/biz_solutions-27.png" class="navigation-icon" width="250">
             <h2 class="navigation-text" >QuickAssist</h2>
         </div>
-
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-        
-            <img src="assets/Service/online-233.png" class="navigation-icon" width="190">
-            <h2 class="navigation-text" style="    margin-top: 10px;">Delinquency Management</h2>
-        
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Service-DM')">
+            
+                <img src="assets/Service/online-233.png" class="navigation-icon" width="190">
+                <h2 class="navigation-text" style="    margin-top: 10px;">Delinquency Management</h2>
+            
+            </div>
         </div>
-
-        <!--<div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-            <img src="assets/Growth/analytics.png" class="navigation-icon" width="250">
-            <h2 class="navigation-text">Analytics</h2>
-        </div>-->
-
-
 
     </div>
 </section>
 <footer>
-    <img src="../../../assets/footer.png">
+    <img src="assets/footer.png">
 </footer>
 
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
+<div id="dialog-box1"><a class="btn-ok">Close</a>
+    <div id="dialog-content1">
+        <div id="dialog-message">
+            <video id="myVideo" width="850" height="540" nocontrols><source src="" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
+    </div>
+    <img src="assets/play.png" id="playPause" onclick="vidplay()">
 </div>
 
 </body>
-<script type="application/javascript">
-    if(readCookie("CurrentLanguage") === "English")
-    {
-        LanguageChange('english');
-    }
-    else if(readCookie("CurrentLanguage") === "Spanish")
-    {
-        LanguageChange('spanish');
-    }
-    //ShowImgPopup("img.jpeg");
-
-    
-</script>
-
 <script language="JavaScript" type="text/javascript" src="../js/solutions.js"></script>
 <script language="JavaScript" type="text/javascript" src="../../Common/Scripts/common-inner.js"></script>
 

@@ -31,9 +31,22 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Secondary/Growth.html";
             //PlaySpeech(speak[0]);
             break;
+        case "Lending":
+            location.href = "Growth-Lending.html";
+            break;
+
+
         case "Experience":
             location.href = "Secondary/Experience.html";
             break;
+        case "Digital-Banking":
+            location.href = "Experience-Digital-Banking.html";
+            break; 
+        case "Online-Card":
+            location.href = "Experience-Online-Card.html";
+            break;
+
+
         case "Security":
             location.href = "Secondary/Security.html";
             break;
@@ -41,6 +54,12 @@ function FC_ContentsCall(strContentsName, strLanguage)
         case "Service":
             location.href = "Secondary/Service.html";
             break;
+        case "Service-DM":
+            location.href = "Service-DM.html";
+            break;
+
+        
+        
         default:
             break;
     } // end switch(strContentsName)
@@ -50,27 +69,26 @@ function FC_ContentsCall(strContentsName, strLanguage)
 
 $(document).ready(function(){
 
-   $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
-      $('#dialog-overlay, #dialog-box').hide();   
+  $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {  
+      var video = document.getElementById("myVideo");  
+      video.pause(); 
+      $('#dialog-overlay1, #dialog-box1').hide();   
       return false;
     });
-
-  $("#btn").click(function () {
-    ShowPopup($("#btn").attr('dir'));
-
-    //$("$list1").show();
-
-  });
-  $("#mapBtn").click(function () {
-    ShowPopup($("#mapBtn").attr('dir'));
-
-    //$("$list1").show();
-
-  });
-
 });
-
-
+function vidplay() {
+       var video = document.getElementById("myVideo");
+       var button = document.getElementById("playPause");
+       if (video.paused) {
+          video.play();
+          //button.textContent = "||";
+          button.src="assets/pause.png";
+       } else {
+          video.pause();
+          //button.textContent = ">";
+          button.src="assets/play.png";
+       }
+    }
 function ShowPopup(src){
 
 // get the screen height and width  
@@ -78,26 +96,18 @@ function ShowPopup(src){
   var maskWidth = $(window).width();
   
   // calculate the values for center alignment
-var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
-var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
+  var dialogLeft = (maskWidth/2) - ($('#dialog-box1').width()/2); 
   
   // assign values to the overlay and dialog box
-  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
-  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  $('#dialog-overlay1').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box1').css({top:dialogTop, left:dialogLeft}).show();
+  $('#playPause').attr('src','assets/play.png');
+  document.getElementById('myVideo').setAttribute('src', src);
+    
+    //document.getElementById('dialog-content1').innerHTML = '';
   
-  if (src=="") {
-    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="images/offers/404.png"/></div></div>';
   }
-  else{
-    if(readCookie("CurrentLanguage") === "English")
-      PlaySpeech("Please take a picture with your phone and show Merchant for your special offer.");
-    else if(readCookie("CurrentLanguage") === "Spanish")
-      PlaySpeech("Por favor, tome una foto con su teléfono y muestre al comerciante su oferta especial.");
-  
-  document.getElementById('dialog-box').innerHTML = '<p style="width:  70%;display:  block;float:  left;font-size: 29px;padding: 20px;">Take Picture and Show merchant</p><a href="#" class="button" style="float: left;position:  relative;top: 20px;">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
-  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
-    }
-}
 
 function ShowPopupARS(src){
 

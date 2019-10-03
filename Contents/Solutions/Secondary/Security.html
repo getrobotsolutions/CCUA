@@ -16,7 +16,7 @@
 
   <link href="../../../css/Main.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../../../boots/css/bootstrap.min.css">
-  <link href="../css/eat.css" rel="stylesheet" type="text/css" />
+  <link href="../css/solutions.css" rel="stylesheet" type="text/css" />
   
 <style type="text/css">
     .wrap {
@@ -33,16 +33,16 @@
         margin: 0;
     }
     .navigation{
-        padding: 0 200px;
+        width: 300px;
     }
     .navigation-box{
         width: 300px;
         height: 320px;
         padding: 20px 0;
         background-color: transparent;
-        border:5px solid #8080806b;
+        border:5px solid rgba(155, 149, 149, 0.61);
         border-radius: 20px;
-        
+        margin:20px 0px 12px 0px;
     }
     .navigation-icon{
         width: 200px;
@@ -89,59 +89,38 @@
         </div>
     </div>
     
-    
-
     <div class="navigation">
 
-
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-        
-          <img src="assets/Security/cyber-88.png" class="navigation-icon">
-          <h2 class="navigation-text" style="margin-top: 10px;">360-Degree Protection</h2> 
-        
+        <div class="row">
+            <div class="col-sm-12 navigation-box" style="" onclick="ShowPopup('assets/Videos/Analysis.mp4')">
+            
+              <img src="assets/Security/cyber-88.png" class="navigation-icon">
+              <h2 class="navigation-text" style="margin-top: 10px;">360-Degree Protection</h2> 
+            </div>
         </div>
-      
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-        
-            <img src="assets/Security/cyber-90.png" class="navigation-icon" width="250">
-            <h2 class="navigation-text" style="margin-top: 10px;">Fraud Risk Managemnt</h2>
+        <div class="row">
+            <div class="col-sm-12 navigation-box" style="" onclick="ShowPopup('assets/Videos/Fraud.mp4')">
+            
+                <img src="assets/Security/cyber-90.png" class="navigation-icon" width="250">
+                <h2 class="navigation-text" style="margin-top: 10px;">Fraud Risk Managemnt</h2>
+            </div>
         </div>
-
-        <!--<div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-        
-            <img src="assets/Growth/lending.png" class="navigation-icon" width="190">
-            <h2 class="navigation-text" style="">Lending</h2>
-        
-        </div>
-
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
-            <img src="assets/Growth/analytics.png" class="navigation-icon" width="250">
-            <h2 class="navigation-text">Analytics</h2>
-        </div>-->
     </div>
+    
 </section>
 <footer>
-    <img src="../../../assets/footer.png">
+    <img src="assets/footer.png">
 </footer>
 
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
+<div id="dialog-box1"><a class="btn-ok">Close</a>
+    <div id="dialog-content1">
+        <div id="dialog-message">
+            <video id="myVideo" width="800" height="540" nocontrols><source src="" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
+    </div>
+    <img src="assets/play.png" id="playPause" onclick="vidplay()">
 </div>
-
 </body>
-<script type="application/javascript">
-    if(readCookie("CurrentLanguage") === "English")
-    {
-        LanguageChange('english');
-    }
-    else if(readCookie("CurrentLanguage") === "Spanish")
-    {
-        LanguageChange('spanish');
-    }
-    //ShowImgPopup("img.jpeg");
-
-    
-</script>
 
 <script language="JavaScript" type="text/javascript" src="../js/solutions.js"></script>
 <script language="JavaScript" type="text/javascript" src="../../Common/Scripts/common-inner.js"></script>

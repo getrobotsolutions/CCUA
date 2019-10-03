@@ -40,7 +40,7 @@
         height: 320px;
         padding: 20px 0;
         background-color: transparent;
-        border:5px solid #8080806b;
+        border:5px solid rgba(155, 149, 149, 0.61);
         border-radius: 20px;
         
     }
@@ -93,27 +93,27 @@
 
     <div class="navigation">
 
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/AdvisorsPlus.mp4')">
         
           <img src="assets/Growth/consulting.png" class="navigation-icon">
           <h2 class="navigation-text">Consulting</h2> 
         
         </div>
       
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/Loyalty.mp4')">
         
             <img src="assets/Growth/loyalty.png" class="navigation-icon" width="250">
             <h2 class="navigation-text" >Loyalty</h2>
         </div>
 
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Lending')">
         
             <img src="assets/Growth/lending.png" class="navigation-icon" width="190">
             <h2 class="navigation-text" style="">Lending</h2>
         
         </div>
 
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/MemberInsight_FINAL.mp4')">
             <img src="assets/Growth/analytics.png" class="navigation-icon" width="250">
             <h2 class="navigation-text">Analytics</h2>
         </div>
@@ -121,11 +121,17 @@
     </div>
 </section>
 <footer>
-    <img src="../../../assets/footer.png">
+    <img src="assets/footer.png">
 </footer>
 
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
+<div id="dialog-overlay1"></div>
+<div id="dialog-box1"><a class="btn-ok">Close</a>
+    <div id="dialog-content1">
+        <div id="dialog-message">
+            <video id="myVideo" width="800" height="540" nocontrols><source src="" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
+    </div>
+    <img src="assets/play.png" id="playPause" onclick="vidplay()">
 </div>
 
 </body>

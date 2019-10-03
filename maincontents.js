@@ -11,7 +11,7 @@
         jokes[9]="Want to know my favorite dance? It’s the robot";
 
         var speak = new Array( );
-        speak[0] = "Check out our schedule of events";
+        speak[0] = "Scrolls through my agenda to see what great events I have going on";
         speak[1] = "";
         speak[2] = "";
         speak[3] = "Pick a song and let's boogie.";
@@ -34,7 +34,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
            break;
         case "Agenda":
             location.href = "Contents/Agenda/index.html";
-            //PlaySpeech(speak[0]);
+            PlaySpeech(speak[0]);
             break;
         case "Solutions":
             //PlaySpeech(speak[2]);

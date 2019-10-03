@@ -16,7 +16,7 @@
 
   <link href="../../../css/Main.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../../../boots/css/bootstrap.min.css">
-  <link href="../css/eat.css" rel="stylesheet" type="text/css" />
+  <link href="../css/solutions.css" rel="stylesheet" type="text/css" />
   
 <style type="text/css">
     .wrap {
@@ -40,7 +40,7 @@
         height: 300px;
         padding: 20px 0;
         background-color: transparent;
-        border:5px solid #8080806b;
+        border:5px solid rgba(155, 149, 149, 0.61);
         border-radius: 20px;
         
     }
@@ -93,40 +93,43 @@
     
 
     <div class="navigation">
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Digital-Banking')">
         
           <img src="assets/Experience/payments-03.png" class="navigation-icon">
           <h2 class="navigation-text">Digital Banking</h2> 
         
         </div>
       
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/Mobile.mp4')">
         
             <img src="assets/Experience/card_management-73.png" class="navigation-icon" width="250">
             <h2 class="navigation-text" style="    margin-top: 10px;">Mobile Card Management</h2>
         </div>
 
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Online-Card')">
         
             <img src="assets/Experience/member_insight-68.png" class="navigation-icon" width="190">
             <h2 class="navigation-text" style="    margin-top: 10px;">Online Card Management</h2>
         
         </div>
 
-        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('')">
+        <div class="col-sm-4 navigation-box" style="" onclick="ShowPopup('assets/Videos/Integration.mp4')">
             <img src="assets/Experience/delinquency-86.png" class="navigation-icon" width="250">
             <h2 class="navigation-text">Integration</h2>
         </div>
     </div>
 </section>
 <footer>
-    <img src="../../../assets/footer.png">
+    <img src="assets/footer.png">
 </footer>
-
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
+<div id="dialog-box1"><a class="btn-ok">Close</a>
+    <div id="dialog-content1">
+        <div id="dialog-message">
+            <video id="myVideo" width="800" height="540" nocontrols><source src="" type="video/mp4">Your browser does not support the video tag.</video>
+        </div>
+    </div>
+    <img src="assets/play.png" id="playPause" onclick="vidplay()">
 </div>
-
 </body>
 <script type="application/javascript">
     if(readCookie("CurrentLanguage") === "English")
