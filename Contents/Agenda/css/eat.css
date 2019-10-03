@@ -1,8 +1,7 @@
-.bmg{
-
-    height: 1158px;
+.main-content{
+  padding-top: 0px;
+  background-image: url('../images/agenda-bg.png');
 }
-
 .home{
     float: right;
     height: 57px;
@@ -127,4 +126,21 @@ a.button:hover {
 p{
 
   margin: 0 0 0;
+}
+ul.nav-tabs{background-color: #013857;color: #3cacc3;font-size: 18px;padding: 0 280px;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+  background-color: 
+  transparent;color: white;
+  border:0px;
+  text-decoration: underline;
+}
+.nav-tabs>li>a{color: white; text-decoration: underline;border:0;}
+.nav-tabs>li>p{
+  padding: 10px 15px;
+}
+.tab-content{
+  padding-top: 20px;
+  height: 1000px;
+    overflow: hidden;
+    overflow-y: scroll;
 }

@@ -32,13 +32,13 @@ function FC_ContentsCall(strContentsName, strLanguage)
             //writeCookie("NavigationState", true, 30);
            location.href = "../../maincontents.htm";
            break;
-        case "Schedule":
-            location.href = "Contents/Schedule/index.html";
-            PlaySpeech(speak[0]);
+        case "Agenda":
+            location.href = "Contents/Agenda/index.html";
+            //PlaySpeech(speak[0]);
             break;
-        case "Calibration":
+        case "Solutions":
             //PlaySpeech(speak[2]);
-            location.href = "../../Contents/Calibration/index.html";
+            location.href = "Contents/Solutions/index.html";
             break;
         case "MatchGame":
             //PlaySpeech(speak[2]);
@@ -132,7 +132,9 @@ $(document).ready(function(){
         $('.welcome-text, .get-started, footer').show();
         writeCookie("NavigationState", false, 30);
     });*/
-    
+  
+    $('body').css('opacity',0).stop().animate({"opacity": 1},1000);
+
 
     $('a.close').click(function () {
         $('#dialog-overlay, #dialog-box').hide();

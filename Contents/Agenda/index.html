@@ -19,12 +19,10 @@
   <link href="css/eat.css" rel="stylesheet" type="text/css" />
   
 <style type="text/css">
-    .wrap {
-        padding-top: 0px;
-    }
+
     .main-content {
-        padding-top: 70px;
-            height: 1102px;
+        padding-top: 0px;
+        
     }
     iframe{
         border: 0;
@@ -64,7 +62,7 @@
 </head>
 
 
-<body >
+<body ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
 
 <header >
     <div class="logo">
@@ -75,57 +73,45 @@
 
 <nav>
     <span class="home-text" onclick="FC_ContentsCall('Home')"><img class="home" src="../../assets/icons/home.png" alt="home" ></span>
-    <!--<h2 class="lang-text">Choose a Language</h2>
-    <div class="nav-language">
-        <button onclick="LanguageChange('english');" id="btn_english" class="btn-english">English</button>
-    </div>-->
+    
 </nav>
 
 <section class="main-content">
-   <div class="bmg">
-        <div class="wrap" >
-            <div class="navigation">
+         <!--<iframe src="https://www.cpcaannualconference.com/agenda.html" width="1080"
+         height="980"></iframe>   -->
 
-              <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('')">
-                <div style="">
-                  <!--<img src="assets/icons/dance.png" class="navigation-icon" width="250">-->
-                  <h2 class="navigation-text">Design Software</h2> 
-                </div>
+        <ul class="nav nav-tabs" id="myTab">
+            <li>
+                <p>AGENDA:</p>
+            </li>
+                <li class="active" style="">
+                    <a id="txt01" data-target="#i01" data-toggle="tab">OCTOBER 16</a>
+                </li>
+                <li class="" style="">
+                    <a id="txt02" data-target="#i02" data-toggle="tab">OCTOBER 17</a>
+                </li>
+                <li class="" style="">
+                    <a id="txt03" data-target="#i03" data-toggle="tab">OCTOBER 18</a>
+                </li>
+            </ul>
+            <div class="tab-content">
                 
-              </div>
-              
-              <div class="col-sm-12 navigation-box" style="">
-                <div >
-                  
-                  <h2 class="navigation-text">Application Software</h2>
+                <div class="tab-pane active" style="text-align: center" id="i01">
+                    <img src="images/agenda-wednesday.png" width="">
                 </div>
-              </div>
-
-              <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('')">
-                <div style="">
-                  <!--<img src="assets/icons/dance.png" class="navigation-icon" width="250">-->
-                  <h2 class="navigation-text">Test Software</h2> 
+                <div class="tab-pane " style="text-align: center" id="i02">
+                    <img src="images/agenda-thursday.png" width="">
                 </div>
-                
-              </div>
-              
-              <div class="col-sm-12 navigation-box" style="">
-                <div >
-                  
-                  <h2 class="navigation-text" style="">Libraries and Plug-Ins</h2>
+                <div class="tab-pane " style="text-align: center" id="i03">
+                    <img src="images/agenda-friday.png" width="">
                 </div>
-              </div>
+            </div>
 
               
-              
-              
-            </div>       
-        </div>
-    </div>
 
 </section>
 <footer>
-    <img src="images/footer.png">
+    <img src="../../assets/footer.png">
 </footer>
 
 <div id="dialog-overlay"></div>

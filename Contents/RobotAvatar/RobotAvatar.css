@@ -34,7 +34,7 @@ overflow: hidden;}
 	padding: 0;
 	position: absolute;
 	/*top: 200px;*/
-	top: 560px;
+	top: 360px;
 	margin:10px 30px 0 30px;
 	border:10px solid white;
 }
@@ -51,13 +51,13 @@ overflow: hidden;}
     height: 394px;
     width: 281px;*/
     left: 250px;
-    top: 673px;
+    top: 473px;
 }
 
 .frame {
 	position: absolute;
 	left: 327px;
-    top: 678px;
+    top: 478px;
 }
 
 #frame {
@@ -71,7 +71,7 @@ overflow: hidden;}
 	/*top: 549px;
 	top:730px;*/
 	left: 463px;
-    top: 828px;
+    top: 628px;
 }
 
 #number {
@@ -82,7 +82,7 @@ overflow: hidden;}
 	position: absolute;
     left: 384px;
     /* top: 474px; */
-    top: 753px;
+    top: 553px;
 }
 .shot img{
 	width: 280px;
@@ -92,7 +92,7 @@ overflow: hidden;}
 .delete {
 	position: absolute;
 	right: 65px;
-	top: 1285px;
+	top: 1085px;
 }
 .delete button{
 	background-color: #d4d4d4;

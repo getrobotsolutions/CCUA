@@ -16,55 +16,39 @@
 
   <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
-  <link href="css/eat.css" rel="stylesheet" type="text/css" />
+  <link href="css/solutions.css" rel="stylesheet" type="text/css" />
   
 <style type="text/css">
     .wrap {
         padding-top: 0px;
     }
     .main-content {
-        padding-top: 0px;
-            height: 1000px;
+        padding-top: 60px;        
     }
     iframe{
         border: 0;
     }
+    .navigation{
+        padding: 0 150px;
+    }
     .navigation-box{
-    background-color: white;
-    
-    border: 10px solid #e80028;
-    padding: 10px;
-    /*text-align: center;*/
-    width: 980px !important;
-    height: 220px;
-    margin: 0 90px 15px 45px;
-
-}
-.navigation-icon{
-    margin: 5px 0 0 50px;
-    width: 200px;
-    float: left;
-}
-.navigation-box div{
-    border: 5px solid #e80028;
-    width: 940px;
-    height: 180px;
-}
-.navigation-text{
-    
-    font-weight: bold;
-    font-size: 65px;
-    color: #000;
-    /*position: relative;
-    top: 10px;*/
-    line-height: 115px;
- }
+        width: 310px;
+        height: 330px;
+        padding: 20px 0;
+        
+    }
+    .navigation-icon{
+        width: 220px;
+    }
+    .navigation-text{
+        margin-top:30px;
+    }
 </style>
 
 </head>
 
 
-<body ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+<body >
 
 <header >
     <div class="logo">
@@ -75,23 +59,39 @@
 
 <nav>
     <span class="home-text" onclick="FC_ContentsCall('Home')"><img class="home" src="../../assets/icons/home.png" alt="home" ></span>
-    <!--<h2 class="lang-text">Choose a Language</h2>
-    <div class="nav-language">
-        <button onclick="LanguageChange('english');" id="btn_english" class="btn-english">English</button>
-    </div>-->
 </nav>
 
 <section class="main-content">
-   <div class="bmg">
-        <div class="wrap" ><img src="images/sc.png">
-         <!--<iframe src="https://www.cpcaannualconference.com/agenda.html" width="1080"
-         height="980"></iframe>   -->
-              
-              
-                   
-        </div>
-    </div>
 
+    <div class="navigation">
+
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Growth')">
+        
+          <img src="../../assets/icons/growth-icon.png" class="navigation-icon">
+          <h2 class="navigation-text">GROWTH</h2> 
+        
+        </div>
+      
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Experience')">
+        
+            <img src="../../assets/icons/experience-icon.png" class="navigation-icon" width="250">
+            <h2 class="navigation-text" >EXPERIENCE</h2>
+        </div>
+
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Security')">
+        
+            <img src="../../assets/icons/security-icon.png" class="navigation-icon" width="190">
+            <h2 class="navigation-text" style="">SECURITY</h2>
+        
+        </div>
+
+        <div class="col-sm-4 navigation-box" style="" onclick="FC_ContentsCall('Service')">
+            <img src="../../assets/icons/services-icon.png" class="navigation-icon" width="250">
+            <h2 class="navigation-text">SERVICE</h2>
+        </div>
+
+    </div>
+    <img src="../../assets/cmyk-logo.png" width="1080" style="margin-top: 30px">
 </section>
 <footer>
     <img src="../../assets/footer.png">
@@ -116,7 +116,7 @@
     
 </script>
 
-<script language="JavaScript" type="text/javascript" src="js/eat.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/solutions.js"></script>
 <script language="JavaScript" type="text/javascript" src="../Common/Scripts/common-inner.js"></script>
 
 <script language="javascript" type="text/javascript">
