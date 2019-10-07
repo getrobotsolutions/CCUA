@@ -1,5 +1,6 @@
 html{height: 1600px;}
 body{
+	background-image: url(../../../../assets/gradient.jpg);
 	
 }
 #container{padding-top: 20px;}
