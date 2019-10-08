@@ -136,3 +136,4 @@ function dance(){
         $('#player').get(0).load();
     },10000);
 }
+SetVolume(.7);
