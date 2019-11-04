@@ -156,7 +156,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         //window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Welcome to the C C U A Annual Conference");
+        window.external.PlaySpeech("Hi Byron Loper, welcome to the P S C U Member Experience Center.");
         
     }
     if(btn_info[2] == '1'){
@@ -167,7 +167,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[3] == '1'){
         //window.external.ChangeLanguage("en-us");
         SetVolume(1);
-       window.external.PlaySpeech("Want to become a robot?");
+       window.external.PlaySpeech("Welcome to the P S C U Member Experience Center.");
         
     }
     if(btn_info[4] == '1'){
